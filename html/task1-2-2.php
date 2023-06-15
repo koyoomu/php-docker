@@ -9,13 +9,14 @@
 </head>
 <body>
   <?php
-  $TaxPercentage = 10;   //define
+  define('TAX','10%');   //define
+  $tax = 0.1;
   $PencilPrice = 100;
-  $TaxIncludedPencilPrice = 110;
+  $TaxIncludedPencilPrice = $PencilPrice + $PencilPrice * $tax;
   $ErasePrice = 200;
-  $TaxIncludedErasePrice = 220;
+  $TaxIncludedErasePrice = $ErasePrice + $ErasePrice * $tax;
   ?>
-  <p><?='現在、消費税は'.$TaxPercentage.'%です。'.'<br>'; ?></p>
+  <p><?='現在、消費税は'.TAX.'です。'.'<br>'; ?></p>
   <p><?='鉛筆が'.$PencilPrice.'円で税込'.$TaxIncludedPencilPrice.'円です。'.'<br>'; ?></p>
   <p><?='消しゴムが'.$ErasePrice.'円で税込'.$TaxIncludedErasePrice.'円です。' ?></p>
 </body>

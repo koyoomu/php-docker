@@ -9,12 +9,13 @@
 </head>
 <body>
   <?php
-  $message = '現在、消費税は10%です。';
+  define('TAX','10%');
+  $message = '現在、消費税は'.TAX.'です。';
   $content = '鉛筆が100円で税込110円です。';
-  define('MESSAGE','消しゴムが200円で税込220円です。');
+  $erase = '消しゴムが200円で税込220円です。';
   ?>
   <P><?=$message.'<br>' ?></P>
   <p><?=$content.'<br>' ?></p>
-  <p><?=MESSAGE; ?></p>
+  <p><?=$erase ?></p>
 </body>
 </html>
