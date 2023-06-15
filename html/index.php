@@ -11,9 +11,16 @@
   <h1>Hello PHP World!</h1>
   <?php 
   $message = '今日の日付'.date('Y/m/d');
-  define('TITLE','定数とは');
+  define('TITLE','配列とは');
+  $a = array('田中',100,'OK');
+  $a[] = 200;
+  array_push($a, 400, 500);
+  unset($a[2]);
   ?>
   <p><?= $message ?></p>
   <p><?= TITLE;?></p>
+  <p>
+<?php print_r($a);?><br>
+  </p>
 </body>
 </html>
