@@ -8,19 +8,25 @@
   <title>phpローカルサーバー</title>
 </head>
 <body>
-  <h1>Hello PHP World!</h1>
-  <?php 
-  $message = '今日の日付'.date('Y/m/d');
-  define('TITLE','配列とは');
-  $a = array('田中',100,'OK');
-  $a[] = 200;
-  array_push($a, 400, 500);
-  unset($a[2]);
+  <?php
+  define('TITLE','Hello PHP World!');
+  $message = '演算子とは';
+  $a = 0;
+
   ?>
-  <p><?= $message ?></p>
-  <p><?= TITLE;?></p>
+  <h1><?=TITLE; ?></h1>
+  <p><?=$message; ?></p>
   <p>
-<?php print_r($a);?><br>
+    <?php
+    $b = ++$a;
+    echo $a .'<br>';
+    echo $b .'<br>';
+    
+    $a = 0;
+    $b = $a++;
+    echo $a .'<br>';
+    echo $b .'<br>';
+    ?>
   </p>
 </body>
 </html>
