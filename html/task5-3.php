@@ -10,36 +10,26 @@
 <body>
   <?php
   $title = ['商品', '価格', '税込価格'];
-  $pencil = ['鉛筆', '100円', '110円'];
-  $erase = ['消しゴム', '200円', '220円'];
-  $ruler = ['定規', '300円', '330円'];
+  $items = [
+    ['商品' => '鉛筆', '価格' => '100円', '税込価格' => '110円'],
+    ['商品' => '消しゴム', '価格' => '200円', '税込価格' => '220円'],
+    ['商品' => '定規', '価格' => '300円', '税込価格' => '330円']];
   ?>
   <table>
-    <tr><?php
+    <tr>
+    <?php
     foreach ($title as $name) {
       echo "<th>". $name. "</th>";
     }
     ?>
     </tr>
-    <?php
-    foreach ($pencil as $name) {
-      echo "<td>". $name. "</td>";
-    }
-    ?>
     <tr>
-    <?php
-    foreach ($erase as $name) {
-      echo "<td>". $name. "</td>";
-    }
-    ?>
+    <?php foreach ($items as $item) :?>
+    <td><?php echo $item['商品']; ?></td>
+    <td><?php echo $item['価格']; ?></td>
+    <td><?php echo $item['税込価格']; ?></td>
     </tr>
-    <tr>
-    <?php
-    foreach ($ruler as $name) {
-      echo "<td>". $name. "</td>";
-    }
-    ?>
-    </tr>
+    <?php endforeach; ?>
   </table>
 </body>
 </html>
